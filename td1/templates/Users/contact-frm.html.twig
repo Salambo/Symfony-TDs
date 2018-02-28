@@ -1,0 +1,21 @@
+{%  extends 'base.html.twig' %}
+
+{% block title %}
+	<h2 class="ui header">{{ title }}</h2>
+{% endblock %}
+
+{% block menu %}
+	
+{% endblock %}
+
+{% block body %}
+	<from action="{{ path("contact_update") }}" method="post" class="ui form">
+		<div class="field">
+			<label for="nom">Nom :</label>
+			<input type="text" value="{{ contact.nom }}">
+		</div>
+		<div class="field">
+			<button class="ui button">Valider</button>
+		</div>
+	</from>
+{% endblock %}
